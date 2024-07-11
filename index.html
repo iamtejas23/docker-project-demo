@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attractive UI</title>
+    <title>Futuristic DevOps UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
             margin: 0;
             padding: 0;
             display: flex;
@@ -18,40 +19,92 @@
         }
         .container {
             text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 700px;
         }
         h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
+            font-size: 3.5em;
+            margin-bottom: 20px;
         }
         p {
             font-size: 1.2em;
         }
         .btn {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 25px;
             margin-top: 20px;
-            background: #9b59b6;
-            border: none;
-            border-radius: 5px;
-            color: #fff;
+            background: #3a3a3a;
+            border: 2px solid #71b7e6;
+            border-radius: 30px;
+            color: #71b7e6;
             text-decoration: none;
             font-size: 1em;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
         }
         .btn:hover {
             background: #71b7e6;
+            color: #fff;
+        }
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            gap: 10px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #71b7e6;
+        }
+        @media (max-width: 768px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 80%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome!</h1>
-        <p>This is My first DevOps Project</p>
+        <p>This is my first DevOps Project</p>
         <a href="#" class="btn">Click Here</a>
+        <div class="cards">
+            <div class="card">
+                <i class="fas fa-cube icon"></i>
+                <h3>Docker Containers</h3>
+                <p>Visualize and manage your Docker containers with ease.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-network-wired icon"></i>
+                <h3>CI/CD Pipeline</h3>
+                <p>Automate your development workflow with continuous integration and delivery.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-server icon"></i>
+                <h3>Server Monitoring</h3>
+                <p>Keep track of your server's performance and uptime.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
