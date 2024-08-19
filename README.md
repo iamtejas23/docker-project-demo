@@ -1,4 +1,4 @@
-### Dockerfile
+### Dockerfile for nginx
 
 ```Dockerfile
 # Use an official Node.js image to build the React app
