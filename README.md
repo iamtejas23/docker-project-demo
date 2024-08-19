@@ -32,15 +32,19 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
+### Steps to Use the Dockerfile
 
+1. **Replace GitHub URL**: Replace `https://github.com/username/repo-name.git` in the `RUN git clone` command with the actual URL of your GitHub repository.
+
+2. **Create Dockerfile**: Save the above content into a file named `Dockerfile`.
+
+3. **Build the Docker Image**: Run the following command in your terminal from the directory containing the `Dockerfile`.
+   ```bash
+   docker build -t react-nginx-app .
+   ```
 
 4. **Run the Docker Container**: After building the image, run the container with the following command:
    ```bash
    docker run -p 80:80 react-nginx-app
    ```
 
-5. **Access the Application**: Open your browser and navigate to `http://localhost` to see your React application running on Nginx.
-
-### Notes:
-- Ensure that your GitHub repository is public or that you have access credentials set up for private repositories if needed.
-- Make sure the Docker build context doesn’t include sensitive information like GitHub credentials if you’re working with private repos.
