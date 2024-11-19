@@ -19,59 +19,88 @@
         }
         .container {
             text-align: center;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             width: 90%;
             max-width: 700px;
         }
         h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #71b7e6;
+            text-shadow: 0 0 10px #71b7e6;
+        }
+        b {
+            font-size: 1.2em;
+            color: #f0a500;
         }
         p {
-            font-size: 1.2em;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
         .btn {
             display: inline-block;
             padding: 12px 25px;
             margin-top: 20px;
-            background: #3a3a3a;
-            border: 2px solid #71b7e6;
+            background: linear-gradient(90deg, #71b7e6, #f0a500);
+            border: none;
             border-radius: 30px;
-            color: #71b7e6;
+            color: #fff;
             text-decoration: none;
             font-size: 1em;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(113, 183, 230, 0.5);
         }
         .btn:hover {
-            background: #71b7e6;
-            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(113, 183, 230, 0.7);
         }
         .cards {
             display: flex;
             justify-content: space-around;
             margin-top: 30px;
-            gap: 10px;
+            gap: 15px;
+            flex-wrap: wrap;
         }
         .card {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 20px;
-            width: 30%;
+            width: 28%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 8px 15px rgba(113, 183, 230, 0.5);
         }
         .icon {
             font-size: 3em;
             margin-bottom: 10px;
             color: #71b7e6;
+            transition: color 0.3s ease;
+        }
+        .card:hover .icon {
+            color: #f0a500;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.5;
         }
         @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
             .cards {
                 flex-direction: column;
                 align-items: center;
@@ -81,6 +110,21 @@
                 margin-bottom: 20px;
             }
         }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+            .icon {
+                font-size: 2.5em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -88,7 +132,7 @@
         <h1>Welcome!</h1>
         <b>v: 1.0.5</b>
         <p>This is My first DevOps Project</p>
-        <a href="#" class="btn">Click Here</a>
+        <a href="#" class="btn">Get Started</a>
         <div class="cards">
             <div class="card">
                 <i class="fas fa-cube icon"></i>
