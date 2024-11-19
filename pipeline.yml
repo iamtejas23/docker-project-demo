@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('CheckOut') {
+            steps {
+                git branch: 'main', url: 'https://github.com/iamtejas23/docker-project-demo.git'
+            }
+        }
+        
+        stage('Run Docker Image') {
+            steps {
+                sh 'docker build -t Docker-Pro .'
+            }
+        }
+            
+        stage('Container Run') {
+            steps {
+                sh 'docker stop cont1'
+                sh 'docker rm cont1'
+                sh 'docker run -d -p 80:80 --name cont1 docker-pro'
+            }
+        }
+    }
+}
