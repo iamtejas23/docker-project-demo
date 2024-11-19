@@ -10,7 +10,7 @@ pipeline {
         
         stage('Run Docker Image') {
             steps {
-                sh 'docker build -t Docker-Pro .'
+                sh 'docker build -t docker-pro .'
             }
         }
             
